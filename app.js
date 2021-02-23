@@ -187,7 +187,6 @@ async function run() {
 
   // step4: upload created chart to slack
   function uploadFile() {
-    console.log("waiting for the new chart");
     request.post(
       {
         url: UPLOAD_URL,
@@ -211,6 +210,9 @@ async function run() {
       }
     );
   }
+  console.log("----------------------------");
+  console.log("Waiting for the new chart");
+  console.log("----------------------------");
   setTimeout(uploadFile, 3000);
 }
 
