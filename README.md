@@ -8,7 +8,7 @@ slackbot of send burndown chart
 
 ### set env
 
-must set .env each variables
+must set .env each variables before use
 
 ### run command
 
