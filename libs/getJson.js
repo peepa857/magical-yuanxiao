@@ -19,8 +19,8 @@ fs.readFileAsync = function (filename) {
 function getJsonAsync(i) {
   return fs.readFileAsync(
     "./output/" +
-    moment().subtract(i, "days").format("YYYYMMDD") +
-    "_sprint_data.json"
+      moment().subtract(i, "days").format("YYYYMMDD") +
+      "_sprint_data.json"
   );
 }
 
