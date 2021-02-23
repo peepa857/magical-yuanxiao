@@ -150,6 +150,18 @@ async function run() {
               ticks: {
                 beginAtZero: true, // set Y min value to 0
               },
+              scaleLabel: {
+                fontSize: 16,
+                fontStyle: "bold",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                fontSize: 16,
+                fontStyle: "bold",
+              },
             },
           ],
         },
