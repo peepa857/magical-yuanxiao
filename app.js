@@ -132,6 +132,7 @@ async function run() {
             borderColor: "rgba(255, 100, 100, 1)",
             data: yValues,
             fill: false,
+            tension: 0, // straight line
           },
           {
             label: "Guideline",
@@ -140,6 +141,7 @@ async function run() {
             data: guidelineValues,
             fill: false,
             borderWidth: 1,
+            tension: 0,
           },
         ],
       },
