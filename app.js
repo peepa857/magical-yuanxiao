@@ -179,7 +179,7 @@ async function run() {
             sprint.name +
             "(" +
             moment(sprint.startDate).format("MM/DD") +
-            "～" +
+            "~" +
             moment(sprint.endDate).format("MM/DD") +
             ")", // chart title
         },
