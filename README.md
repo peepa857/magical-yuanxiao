@@ -15,3 +15,5 @@ must set .env each variables before use
 `node sendMsg.js` test send message to slack
 
 `node app.js` send burndown chart to slack
+
+`node job.js` daily job at working day 18:00
