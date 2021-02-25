@@ -9,6 +9,7 @@
     "fs": "0.0.1-security",
     "jira-client": "^6.21.1",
     "moment": "^2.29.1",
+    "node-schedule": "^2.0.0",
     "request": "^2.88.2"
   }
 }

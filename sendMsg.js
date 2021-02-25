@@ -9,7 +9,7 @@ dotenv.config("./env");
 const slackToken = process.env["SLACK_TOKEN"];
 const slackChannel = process.env["SLACK_CHANNEL"];
 
-async function run() {
+async function sendMsg() {
   const res = await axios.post(
     MSG_URL,
     {
@@ -25,4 +25,4 @@ async function run() {
   console.log("Done", res.data);
 }
 
-run().catch((err) => console.log(err));
+sendMsg().catch((err) => console.log(err));

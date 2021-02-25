@@ -33,7 +33,7 @@ const jira = new JiraApi({
 // today's date
 const YYYYMMDD = moment().format("YYYYMMDD");
 
-async function run() {
+async function sendChart() {
   // step1: get sprint info to generate json from jira
   let sprint = {};
   await jira
@@ -50,8 +50,8 @@ async function run() {
         .value
         ? issues.contents.completedIssuesEstimateSum.value
         : 0 + issues.contents.issuesNotCompletedEstimateSum.value
-        ? issues.contents.issuesNotCompletedEstimateSum.value
-        : 0; // ストーリー点数合計
+          ? issues.contents.issuesNotCompletedEstimateSum.value
+          : 0; // ストーリー点数合計
       sprint["notCompletedIssuesPointSum"] = issues.contents
         .issuesNotCompletedEstimateSum.value
         ? issues.contents.issuesNotCompletedEstimateSum.value
@@ -219,7 +219,7 @@ async function run() {
         if (error) {
           console.log(error);
         } else {
-          console.log("Send burn down chart to slack.");
+          console.log("Send burn down chart to slack at " + moment().format("YYYY/MM/DD HH:mm:ss"));
         }
       }
     );
@@ -229,5 +229,6 @@ async function run() {
   console.log("----------------------------");
   setTimeout(uploadFile, 3000);
 }
+sendChart().catch((err) => console.log(err));
 
-run().catch((err) => console.log(err));
+module.exports = sendChart;
