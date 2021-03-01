@@ -50,8 +50,8 @@ async function sendChart() {
         .value
         ? issues.contents.completedIssuesEstimateSum.value
         : 0 + issues.contents.issuesNotCompletedEstimateSum.value
-          ? issues.contents.issuesNotCompletedEstimateSum.value
-          : 0; // ストーリー点数合計
+        ? issues.contents.issuesNotCompletedEstimateSum.value
+        : 0; // ストーリー点数合計
       sprint["notCompletedIssuesPointSum"] = issues.contents
         .issuesNotCompletedEstimateSum.value
         ? issues.contents.issuesNotCompletedEstimateSum.value
@@ -219,7 +219,10 @@ async function sendChart() {
         if (error) {
           console.log(error);
         } else {
-          console.log("Send burn down chart to slack at " + moment().format("YYYY/MM/DD HH:mm:ss"));
+          console.log(
+            "Send burn down chart to slack at " +
+              moment().format("YYYY/MM/DD HH:mm:ss")
+          );
         }
       }
     );
